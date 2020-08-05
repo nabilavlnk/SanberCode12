@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/datatables', function(){
+    return view('tables.data');
 });
 
-Route::get('/index','IndexController@index');
-
-Route::get('/form','IndexController@form');
-
-Route::get('/welcome2','IndexController@welcome2');
+Route::get('/', function(){
+    return view('tables.index');
+});
